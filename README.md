@@ -22,6 +22,53 @@ Este repo reúne ejemplos mínimos para comprender cómo LangChain orquesta agen
 
 ---
 
+## 📋 Contenido
+
+- `server_local.py` - Servidor MCP con herramientas matemáticas y de saludo
+- `client_async_simple.py` - **⭐ Cliente Asincrónico (RECOMENDADO)**
+- `client_stdio_simple.py` - Cliente Sincrónico (con conversión)
+
+---
+
+## 🚀 Inicio Rápido
+
+### Cliente Asincrónico (Recomendado)
+
+```bash
+# Ejecutar el cliente asincrónico
+cd mcp_sample/mcp_client
+conda run -n llm-agent python client_async_simple.py
+```
+
+**Salida esperada:**
+```
+2025-11-14 00:12:10,376 - __main__ - INFO - 🚀 Servidor MCP iniciado y corriendo...
+2025-11-14 00:12:10,382 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-14 00:12:24,763 - __main__ - INFO - 🚀 Servidor MCP iniciado y corriendo...
+2025-11-14 00:12:24,769 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-14 00:12:24,769 - __main__ - INFO - GREET: nombre=Alexander
+
+{
+    "messages": [
+        "content="" ...
+    ]
+}
+```
+
+## 🔧 Herramientas Disponibles
+
+El servidor MCP expone las siguientes herramientas:
+
+| Herramienta | Descripción | Parámetros |
+|-------------|-------------|-----------|
+| `add` | Suma dos números | `a: float, b: float` |
+| `subtract` | Resta b de a | `a: float, b: float` |
+| `multiply` | Multiplica dos valores | `a: float, b: float` |
+| `divide` | Divide a entre b | `a: float, b: float` |
+| `hello-mcp` | Emite un saludo | `name: str = "amigo"` |
+
+---
+
 ## ⚙️ Cómo probar
 
 1. **Instala dependencias mínimas**

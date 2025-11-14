@@ -12,7 +12,7 @@ async def main():
             "stdio_server": {
                 "transport": "stdio",
                 "command": "python",
-                "args": ["./mcp_server_local/server_local.py"] #[str(Path(__file__).with_name("server_local.py"))],
+                "args": ["../mcp_server_local/server_local.py"] #[str(Path(__file__).with_name("server_local.py"))],
             }
         }
     )

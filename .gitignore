@@ -2,3 +2,8 @@ pruebas_preliminares
 data
 .env
 .DS_*
+a2a/a2a-samples
+a2a_sample/*
+.env
+.venv
+.vscode
